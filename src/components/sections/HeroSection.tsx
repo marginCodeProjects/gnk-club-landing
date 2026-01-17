@@ -1,13 +1,15 @@
+import Header from "@/components/layout/Header";
+
 export function HeroSection() {
     return (
-        <section className="relative overflow-hidden">
+        <div className="relative min-h-screen overflow-hidden">
             {/* фон */}
-            <div className="absolute inset-0 bg-hero-gradient" />
+            <div className="absolute inset-0 z-0 bg-hero-gradient" />
 
             {/* контент */}
-            <div className="relative z-10 container mx-auto px-4 pt-10 pb-32">
-                <div className="h-[100vh]"/>
+            <div className="relative z-10 container mx-auto px-4">
+                <Header/>
             </div>
-        </section>
+        </div>
     )
 }
