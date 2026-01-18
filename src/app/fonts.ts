@@ -23,13 +23,9 @@ export const ltSuperior = localFont({
 });
 
 export const agPalatial = localFont({
-    src: [
-        {
-            path: './fonts/ag-palatial/agpalatial_bolditalic.ttf',
-            weight: '400',
-            style: 'italic',
-        },
-    ],
+    src: './fonts/ag-palatial/agpali.woff2', // Убедитесь, что путь верный
     variable: '--font-ag-palatial',
-    display: 'swap',
+    weight: '400', // Попробуйте указать точный вес, даже если это курсив
+    style: 'normal', // Если шрифт сам по себе наклонный
+    display: 'block', // Попробуйте 'block' вместо 'swap', чтобы заставить браузер ждать шрифт
 });

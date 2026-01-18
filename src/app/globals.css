@@ -30,7 +30,6 @@ body {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
     --font-sans: var(--font-lt-superior), ui-sans-serif, system-ui;
-    /* Добавляем кастомный шрифт для курсива (акцентный) */
     --font-accent: var(--font-ag-palatial);
 }
 
@@ -44,6 +43,10 @@ body {
 body {
     background: var(--background);
     font-family: var(--font-lt-superior);
+}
+
+.font-accent {
+    font-family: var(--font-ag-palatial) !important;
 }
 
 em, i {
