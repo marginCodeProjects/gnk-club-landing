@@ -1,14 +1,21 @@
 import Header from "@/components/layout/Header";
 import GnkMainInfo from "@/components/hero/GNKMainInfo";
+import GonkaAndBitcoin from "@/components/hero/GonkaAndBitcoin";
 
 export function HeroSection() {
     return (
-        <div className="relative min-h-screen overflow-hidden">
+        <div className="relative overflow-hidden">
             <div className="absolute inset-0 z-0 bg-hero-gradient" />
 
-            <div className="relative z-10 container mx-auto px-4">
-                <Header/>
-                <GnkMainInfo/>
+            <div className="relative z-10">
+                <div className="max-w-[1440px] mx-auto px-20">
+                    <Header/>
+                    <GnkMainInfo/>
+                </div>
+
+                <div className="max-w-[1440px] mx-auto px-10">
+                    <GonkaAndBitcoin/>
+                </div>
             </div>
         </div>
     )
