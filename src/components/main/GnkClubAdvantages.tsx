@@ -59,7 +59,7 @@ const GNK_CLUB_PRICE = [
 const GnkClubAdvantages = () => {
     return (
         <div>
-            <div className="grid grid-cols-2 my-10">
+            <div className="grid grid-cols-2 gap-7 my-20">
                 <div className="text-5xl text-[#344499] leading-[120%]">Преимущества работы с GNK.CLUB</div>
                 <div className="text-xl text-left text-[#01040B]">
                     Самостоятельная аренда GPU начинается от $2.2/час,
