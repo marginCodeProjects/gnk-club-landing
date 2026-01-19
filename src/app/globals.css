@@ -56,16 +56,14 @@ em, i {
 
 .bg-hero-gradient {
     background:
-        /* белый туман вниз */
             linear-gradient(
                     to bottom,
-                    transparent 60%,
-                    rgba(255, 255, 255, var(--fog-white-weak)) 70%,
-                    rgba(255, 255, 255, var(--fog-white-medium)) 85%,
-                    var(--hero-white) 100%
+                    transparent 50%,
+                    rgba(255, 255, 255, var(--fog-white-weak)) 62%,
+                    rgba(255, 255, 255, var(--fog-white-medium)) 78%,
+                    var(--hero-white) 90%
             ),
 
-                /* зелёный туман вниз */
             linear-gradient(
                     to bottom,
                     transparent 45%,
@@ -74,7 +72,6 @@ em, i {
                     transparent 85%
             ),
 
-                /* диагональная база */
             linear-gradient(
                     to bottom left,
                     var(--hero-dark) var(--diag-dark-start),
@@ -85,7 +82,16 @@ em, i {
             );
 }
 
-
+.bg-main-gradient {
+    background:
+            linear-gradient(
+                    to bottom left,
+                    var(--hero-dark) 0%,
+                    var(--hero-dark) 5%,
+                    var(--hero-blue) 40%,
+                    var(--hero-green) 100%
+            );
+}
 
 .bg-bottom-gradient {
     background:
