@@ -113,6 +113,15 @@ em, i {
             );
 }
 
+.bg-light-green-gradient {
+    background:
+            linear-gradient(
+                    to bottom left,
+                    #88C8C6 65%,
+                    #ffffff 100%
+            );
+}
+
 .bg-bottom-gradient {
     background:
         /* белый туман вверх */

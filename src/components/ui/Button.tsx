@@ -6,7 +6,8 @@ import clsx from 'clsx';
 interface ButtonProps {
     text: string;
     onClick: () => void;
-    type?: 'white' | 'transparent'
+    type?: 'white' | 'transparent' | 'custom';
+    className?: string;
 }
 
 const buttonStyles = {
@@ -25,11 +26,12 @@ const buttonStyles = {
   `,
 };
 
-const Button: React.FC<ButtonProps> = ({text, onClick, type = 'white'}) => {
+const Button: React.FC<ButtonProps> = ({text, onClick, type = 'white', className}) => {
     return (
         <button className={clsx(
             'inline-flex items-center justify-center rounded-3xl border font-medium transition-colors duration-200',
             'px-7 py-4',
+            className,
             buttonStyles[type]
         )} onClick={onClick}>
             {text}
