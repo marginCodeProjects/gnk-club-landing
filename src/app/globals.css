@@ -118,10 +118,10 @@ em, i {
         /* белый туман вверх */
             linear-gradient(
                     to top,
-                    transparent 60%,
-                    rgba(255, 255, 255, var(--fog-white-weak)) 70%,
-                    rgba(255, 255, 255, var(--fog-white-medium)) 85%,
-                    var(--hero-white) 100%
+                    transparent 50%,
+                    rgba(255, 255, 255, var(--fog-white-weak)) 62%,
+                    rgba(255, 255, 255, var(--fog-white-medium)) 78%,
+                    var(--hero-white) 90%
             ),
 
                 /* зелёный туман вверх */

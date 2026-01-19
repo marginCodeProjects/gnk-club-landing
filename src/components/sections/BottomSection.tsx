@@ -1,15 +1,20 @@
 import Footer from "@/components/layout/Footer";
+import WorkCycle from "@/components/bottom/WorkCycle";
 
 export function BottomSection() {
     return (
         <div className="relative min-h-screen overflow-hidden">
-            {/* фон */}
             <div className="absolute inset-0 bg-bottom-gradient" />
 
-            {/* контент */}
-            <div className="relative z-20 container mx-auto px-4">
+            <div className="relative z-20 min-h-screen">
+                <div className="max-w-[1440px] mx-auto px-10">
+                    <WorkCycle/>
+                </div>
                 <div className="h-[100vh]"/>
-                <Footer/>
+
+                <div className="max-w-[1440px] mx-auto px-20">
+                    <Footer/>
+                </div>
             </div>
         </div>
     )
