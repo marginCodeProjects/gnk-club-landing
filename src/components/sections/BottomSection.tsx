@@ -2,6 +2,7 @@ import Footer from "@/components/layout/Footer";
 import WorkCycle from "@/components/bottom/WorkCycle";
 import TariffsSection from "@/components/bottom/TariffsSection";
 import InfrastructureAdvantages from "@/components/bottom/InfrastructureAdvantages";
+import UsefulResources from "@/components/bottom/UsefulResources";
 
 export function BottomSection() {
     return (
@@ -16,6 +17,7 @@ export function BottomSection() {
                 <div className="max-w-[1440px] mx-auto px-20">
                     <TariffsSection/>
                     <InfrastructureAdvantages/>
+                    <UsefulResources/>
                     <Footer/>
                 </div>
             </div>
