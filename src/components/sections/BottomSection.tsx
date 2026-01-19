@@ -3,6 +3,7 @@ import WorkCycle from "@/components/bottom/WorkCycle";
 import TariffsSection from "@/components/bottom/TariffsSection";
 import InfrastructureAdvantages from "@/components/bottom/InfrastructureAdvantages";
 import UsefulResources from "@/components/bottom/UsefulResources";
+import LaunchPrice from "@/components/bottom/LaunchPrice";
 
 export function BottomSection() {
     return (
@@ -18,6 +19,7 @@ export function BottomSection() {
                     <TariffsSection/>
                     <InfrastructureAdvantages/>
                     <UsefulResources/>
+                    <LaunchPrice/>
                     <Footer/>
                 </div>
             </div>
