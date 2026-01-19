@@ -104,6 +104,15 @@ em, i {
             );
 }
 
+.bg-blue-gradient {
+    background:
+            linear-gradient(
+                    to left,
+                    var(--hero-dark),
+                    var(--hero-blue)
+            );
+}
+
 .bg-bottom-gradient {
     background:
         /* белый туман вверх */

@@ -1,6 +1,7 @@
 import GnkInfrastructure from "@/components/main/GnkInfrastructure";
 import GnkClubAdvantages from "@/components/main/GnkClubAdvantages";
 import TargetGroup from "@/components/main/TargetGroup";
+import MoneyRisks from "@/components/main/MoneyRisks";
 
 export function MainSection() {
     return (
@@ -10,6 +11,7 @@ export function MainSection() {
                 <div className="h-px bg-[#D6D6D6] my-20"></div>
                 <GnkClubAdvantages/>
                 <TargetGroup/>
+                <MoneyRisks/>
             </div>
         </div>
     )
