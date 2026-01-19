@@ -93,6 +93,17 @@ em, i {
             );
 }
 
+.bg-transparent-gradient {
+    background:
+            linear-gradient(
+                    to bottom left,
+                    rgba(1, 4, 11, 0.12) 0%,
+                    rgba(1, 4, 11, 0.12) 5%,
+                    rgba(10, 63, 113, 0.14) 40%,
+                    rgba(8, 118, 114, 0.18) 100%
+            );
+}
+
 .bg-bottom-gradient {
     background:
         /* белый туман вверх */

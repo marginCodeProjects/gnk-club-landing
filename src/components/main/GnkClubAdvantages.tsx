@@ -165,7 +165,7 @@ const GnkClubAdvantages = () => {
                     </div>
                 </div>
             </div>
-            <div className="my-10 mx-auto w-fit">
+            <div className="mt-10 mb-30 mx-auto w-fit">
                 <Button text={'Рассчитать конфигурацию'} onClick={() => {}}></Button>
             </div>
         </div>
