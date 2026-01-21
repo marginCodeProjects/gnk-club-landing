@@ -39,7 +39,7 @@ const GonkaAndBitcoin = () => {
                     </div>
                 </div>
             </div>
-            <div className="mt-10 grid md:grid-cols-2 text-xl gap-10">
+            <div className="mt-10 grid md:grid-cols-2 text-base md:text-xl gap-10">
                 <div>
                     <i className={styles.boldItalic}>Миссия:</i> Не допустить монополизации
                     AI-инфраструктуры несколькими крупными корпорациями,

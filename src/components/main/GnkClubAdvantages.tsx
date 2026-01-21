@@ -59,9 +59,9 @@ const GNK_CLUB_PRICE = [
 const GnkClubAdvantages = () => {
     return (
         <div>
-            <div className="grid grid-cols-2 gap-7 my-20">
-                <div className="text-5xl text-[#344499] leading-[120%]">Преимущества работы с GNK.CLUB</div>
-                <div className="text-xl text-left text-[#01040B]">
+            <div className="grid md:grid-cols-2 gap-7 my-20">
+                <div className="text-4xl md:text-5xl text-center md:text-left text-[#344499] leading-[120%]">Преимущества работы с GNK.CLUB</div>
+                <div className="text-base md:text-xl text-center md:text-left text-[#01040B]">
                     Самостоятельная аренда GPU начинается от $2.2/час,
                     но реальная себестоимость значительно выше из-за простоев,
                     ошибок настройки и времени на переговоры.
@@ -71,9 +71,9 @@ const GnkClubAdvantages = () => {
                     </b>
                 </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-7 text-xl">
-                <div className="border-gray-300 border-2 px-10 pt-7 pb-5 rounded-3xl">
-                    <div className="flex gap-4 items-center mb-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-7 text-base md:text-xl">
+                <div className="border-gray-300 border-2 px-4 md:px-10 pt-7 pb-5 rounded-3xl">
+                    <div className="flex gap-4 items-center mb-5 md:mb-10">
                         <Image
                             src={'/book.svg'}
                             alt='book'
@@ -81,7 +81,7 @@ const GnkClubAdvantages = () => {
                             height={72}
                         />
                         <div>
-                            <div className="my-2 text-2xl">
+                            <div className="my-2 text-xl md:text-2xl">
                                 <b><i>Самостоятельная настройка</i></b>
                             </div>
                             <div className="my-2 text-gray-400">
@@ -91,7 +91,7 @@ const GnkClubAdvantages = () => {
                     </div>
                     <div>
                         {disadvantages.map(item =>
-                            <div key={item.title} className="flex mx-4 gap-10 items-center my-5">
+                            <div key={item.title} className="flex mx-4 gap-4 md:gap-10 items-center my-5">
                                 <Image
                                     src={'/minus-outline.svg'}
                                     alt='minus'
@@ -109,7 +109,7 @@ const GnkClubAdvantages = () => {
                             </div>
                         )}
                     </div>
-                    <div className="flex flex-col gap-3 rounded-3xl bg-[#087672]/17 p-7">
+                    <div className="flex flex-col gap-3 rounded-3xl bg-[#087672]/17 px-4 py-7 md:p-7">
                         {MANUAL_PRICE.map(item =>
                             <div key={item.title} className="flex justify-between">
                                 <div className="text-gray-400">{item.title}</div>
@@ -118,8 +118,8 @@ const GnkClubAdvantages = () => {
                         )}
                     </div>
                 </div>
-                <div className="bg-main-gradient text-white p-10 rounded-3xl pt-7 pb-5">
-                    <div className="flex gap-4 items-center mb-10">
+                <div className="bg-main-gradient text-white px-4 md:px-10 rounded-3xl pt-7 pb-5">
+                    <div className="flex gap-4 items-center mb-5 md:mb-10">
                         <Image
                             src={'/flash.svg'}
                             alt='flash'
@@ -127,7 +127,7 @@ const GnkClubAdvantages = () => {
                             height={72}
                         />
                         <div>
-                            <div className="my-2 text-2xl">
+                            <div className="my-2 text-xl md:text-2xl">
                                 <b><i>GNK.CLUB под ключ</i></b>
                             </div>
                             <div className="my-2 text-gray-200">
@@ -137,7 +137,7 @@ const GnkClubAdvantages = () => {
                     </div>
                     <div>
                         {advantages.map(item =>
-                            <div key={item.title} className="flex mx-4 gap-10 items-center my-5">
+                            <div key={item.title} className="flex mx-4 gap-4 md:gap-10 items-center my-5">
                                 <Image
                                     src={'/plus.svg'}
                                     alt='plus'
@@ -155,7 +155,7 @@ const GnkClubAdvantages = () => {
                             </div>
                         )}
                     </div>
-                    <div className="flex flex-col gap-2 rounded-3xl bg-white/17 p-7">
+                    <div className="flex flex-col gap-2 rounded-3xl bg-white/17 px-4 py-7 md:p-7">
                         {GNK_CLUB_PRICE.map(item =>
                             <div key={item.title} className="flex justify-between">
                                 <div className="text-gray-200">{item.title}</div>
@@ -165,8 +165,8 @@ const GnkClubAdvantages = () => {
                     </div>
                 </div>
             </div>
-            <div className="mt-10 mb-30 mx-auto w-fit">
-                <Button text={'Рассчитать конфигурацию'} onClick={() => {}}></Button>
+            <div className="mt-10 mb-30 md:mx-auto w-full md:w-fit">
+                <Button text={'Рассчитать конфигурацию'} onClick={() => {}} className="w-full md:w-auto"></Button>
             </div>
         </div>
     );
