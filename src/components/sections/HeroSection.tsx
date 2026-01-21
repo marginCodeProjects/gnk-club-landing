@@ -8,7 +8,7 @@ export function HeroSection() {
             <div className="absolute inset-0 z-0 bg-hero-gradient" />
 
             <div className="relative z-10 min-h-screen">
-                <div className="max-w-[1440px] mx-auto px-20">
+                <div className="max-w-[1440px] mx-auto px-5 md:px-20">
                     <Header/>
                     <GnkMainInfo/>
                 </div>

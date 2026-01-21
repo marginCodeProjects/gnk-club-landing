@@ -24,13 +24,14 @@ const buttonStyles = {
     backdrop-blur-sm
     hover:bg-white/25
   `,
+    custom: ``,
 };
 
 const Button: React.FC<ButtonProps> = ({text, onClick, type = 'white', className}) => {
     return (
         <button className={clsx(
             'inline-flex items-center justify-center rounded-3xl border font-medium transition-colors duration-200',
-            'px-7 py-4',
+            'px-5 py-3 md:px-7 md:py-4',
             className,
             buttonStyles[type]
         )} onClick={onClick}>
