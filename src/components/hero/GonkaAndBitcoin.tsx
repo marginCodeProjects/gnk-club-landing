@@ -15,38 +15,38 @@ const GonkaAndBitcoin = () => {
             <div className={styles.section}>
                 <div className={styles.wrapper}>
                     <div className={styles.circle}>
-                        <h3>10,000+ NVIDIA H100 в сети</h3>
-                        <p>
+                        <div className="text-center md:text-left text-xl md:text-2xl"><b><i>10,000+ NVIDIA H100 в сети</i></b></div>
+                        <div className="text-center md:text-left text-base md:text-xl">
                             Единый распределённый пул GPU для реальных AI-нагрузок
                             с автоматическим масштабированием.
-                        </p>
+                        </div>
                     </div>
 
                     <div className={styles.circle}>
-                        <h3>AWS/Azure — альтернатива монополии</h3>
-                        <p>
+                        <div className="text-center md:text-left text-xl md:text-2xl"><b><i>AWS/Azure — альтернатива монополии</i></b></div>
+                        <div className="text-center md:text-left text-base md:text-xl">
                             Прямой доступ к вычислениям без вендор-локина,
                             закрытых тарифов и централизованного контроля.
-                        </p>
+                        </div>
                     </div>
 
                     <div className={`${styles.circle} ${styles.active}`}>
-                        <h3>Bitcoin — философия децентрализации</h3>
-                        <p>
+                        <div className="text-center md:text-left text-xl md:text-2xl"><b><i>Bitcoin — философия децентрализации</i></b></div>
+                        <div className="text-center md:text-left text-base md:text-xl">
                             Распределённая модель с независимыми участниками
                             и прозрачными экономическими стимулами.
-                        </p>
+                        </div>
                     </div>
                 </div>
             </div>
             <div className="mt-10 grid md:grid-cols-2 text-base md:text-xl gap-10">
                 <div>
-                    <i className={styles.boldItalic}>Миссия:</i> Не допустить монополизации
+                    <b><i className="text-center md:text-left text-xl md:text-2xl">Миссия:</i></b> Не допустить монополизации
                     AI-инфраструктуры несколькими крупными корпорациями,
                     как это произошло с классическими вычислениями (Amazon, Microsoft, Google).
                 </div>
                 <div>
-                    <i className={styles.boldItalic}>Вдохновение Bitcoin:</i> GONKA следует модели Bitcoin
+                    <b><i className="text-center md:text-left text-xl md:text-2xl">Вдохновение Bitcoin:</i></b> GONKA следует модели Bitcoin
                     и инфраструктуре, созданной майнерами. Децентрализованная сеть майнеров Bitcoin
                     в разы превосходит вычислительную мощность традиционных облачных компаний
                     — именно такую модель мы строим для AI-вычислений.

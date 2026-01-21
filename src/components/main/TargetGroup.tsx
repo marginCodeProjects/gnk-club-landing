@@ -37,7 +37,7 @@ const TargetGroup = () => {
                     снизить влияние внешних платформ и получить стабильную рабочую конфигурацию.
                 </div>
             </div>
-            <div className="grid md:grid-cols-3 gap-7">
+            <div className="grid xl:grid-cols-3 gap-7">
                 <div className="px-7 pt-10 pb-15 rounded-3xl bg-main-gradient text-white">
                     <Image
                         src={'/blocks-icon-light.svg'}

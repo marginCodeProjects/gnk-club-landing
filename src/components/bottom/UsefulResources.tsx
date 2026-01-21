@@ -29,7 +29,7 @@ const resouces = [
 
 const UsefulResources = () => {
     return (
-        <div className="hidden md:block text-white my-20">
+        <div className="hidden lg:block text-white my-20">
             <div className="text-4xl md:text-5xl text-center md:text-left mb-7">Полезные ресурсы</div>
             <div className="text-base md:text-xl text-center md:text-left md:w-1/3 mb-10">
                 Узнайте больше о GNK.CLUB и децентрализованных вычислениях

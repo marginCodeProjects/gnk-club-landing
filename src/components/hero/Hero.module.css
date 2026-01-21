@@ -37,20 +37,7 @@
     border-color: rgba(0, 120, 120, 0.35);
 }
 
-.circle h3,
-.boldItalic {
-    font-family: var(--font-ag-palatial);
-    font-size: 1.67vw;
-    font-weight: 700;
-    margin-bottom: 1.5vw;
-}
-
-.circle p {
-    font-size: 1.38vw;
-    line-height: 1.2;
-}
-
-@media (max-width: 768px) {
+@media (max-width: 1150px) {
     .wrapper {
         flex-direction: column;
     }
@@ -61,18 +48,7 @@
         max-width: 350px;
         height: auto;
         min-height: 350px;
-        padding: 20vw 16vw;
-    }
-
-    .circle h3,
-    .boldItalic {
-        text-align: center;
-        font-size: 5vw;
-    }
-
-    .circle p {
-        text-align: center;
-        font-size: 4vw;
+        padding: 20vw 8vw;
     }
 
     .circle:not(:first-child) {

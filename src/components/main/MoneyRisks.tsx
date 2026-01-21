@@ -9,7 +9,7 @@ const MoneyRisks = () => {
         <div className="
             my-20 rounded-3xl overflow-hidden
             bg-blue-gradient text-white grid
-            grid-cols-1 grid-rows-2 md:grid-cols-2 md:grid-rows-1
+            grid-cols-1 grid-rows-2 lg:grid-cols-2 lg:grid-rows-1
             gap-7 items-stretch"
         >
             <div className="flex flex-col gap-7 mt-20 mx-7 md:my-10 md:ml-7">

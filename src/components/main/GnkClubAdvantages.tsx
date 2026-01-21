@@ -71,7 +71,7 @@ const GnkClubAdvantages = () => {
                     </b>
                 </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-7 text-base md:text-xl">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-7 text-base md:text-xl">
                 <div className="border-gray-300 border-2 px-4 md:px-10 pt-7 pb-5 rounded-3xl">
                     <div className="flex gap-4 items-center mb-5 md:mb-10">
                         <Image
