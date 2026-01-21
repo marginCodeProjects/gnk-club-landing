@@ -3,10 +3,10 @@ import styles from './Hero.module.css'
 
 const GonkaAndBitcoin = () => {
     return (
-        <div className="bg-white rounded-3xl px-15 py-20 box-border mt-20">
-            <div className="grid grid-cols-2 gap-20">
-                <div className="text-5xl text-[#344499]">GONKA — не классический майнинг</div>
-                <div className="text-xl text-left text-[#01040B]">
+        <div className="bg-white rounded-3xl px-3 py-10 md:px-15 md:py-20 box-border mt-20">
+            <div className="grid px-3 md:grid-cols-2 gap-20">
+                <div className="text-4xl md:text-5xl text-[#344499]">GONKA — не классический майнинг</div>
+                <div className="text-base md:text-xl text-left text-[#01040B]">
                     GONKA — децентрализованная сеть GPU-вычислений
                     для задач искусственного интеллекта. Мощности используются для реальных AI-нагрузок,
                     вознаграждение начисляется в токенах GNK.
@@ -15,7 +15,7 @@ const GonkaAndBitcoin = () => {
             <div className={styles.section}>
                 <div className={styles.wrapper}>
                     <div className={styles.circle}>
-                        <h3>10,000+ NVIDIA<br />H100 в сети</h3>
+                        <h3>10,000+ NVIDIA H100 в сети</h3>
                         <p>
                             Единый распределённый пул GPU для реальных AI-нагрузок
                             с автоматическим масштабированием.
@@ -23,7 +23,7 @@ const GonkaAndBitcoin = () => {
                     </div>
 
                     <div className={styles.circle}>
-                        <h3>AWS/Azure —<br />альтернатива монополии</h3>
+                        <h3>AWS/Azure — альтернатива монополии</h3>
                         <p>
                             Прямой доступ к вычислениям без вендор-локина,
                             закрытых тарифов и централизованного контроля.
@@ -31,7 +31,7 @@ const GonkaAndBitcoin = () => {
                     </div>
 
                     <div className={`${styles.circle} ${styles.active}`}>
-                        <h3>Bitcoin — философия<br />децентрализации</h3>
+                        <h3>Bitcoin — философия децентрализации</h3>
                         <p>
                             Распределённая модель с независимыми участниками
                             и прозрачными экономическими стимулами.
@@ -39,7 +39,7 @@ const GonkaAndBitcoin = () => {
                     </div>
                 </div>
             </div>
-            <div className="mt-10 grid grid-cols-2 text-xl gap-10">
+            <div className="mt-10 grid md:grid-cols-2 text-xl gap-10">
                 <div>
                     <i className={styles.boldItalic}>Миссия:</i> Не допустить монополизации
                     AI-инфраструктуры несколькими крупными корпорациями,

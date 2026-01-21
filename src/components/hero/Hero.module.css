@@ -56,14 +56,27 @@
     }
 
     .circle {
+        aspect-ratio: 1 / 1;
         width: 100%;
-        max-width: 420px;
+        max-width: 350px;
         height: auto;
-        min-height: 320px;
+        min-height: 350px;
+        padding: 20vw 16vw;
+    }
+
+    .circle h3,
+    .boldItalic {
+        text-align: center;
+        font-size: 5vw;
+    }
+
+    .circle p {
+        text-align: center;
+        font-size: 4vw;
     }
 
     .circle:not(:first-child) {
         margin-left: 0;
-        margin-top: -2vw;
+        margin-top: -10vw;
     }
 }
