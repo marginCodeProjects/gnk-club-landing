@@ -11,11 +11,11 @@ export function BottomSection() {
             <div className="absolute inset-0 bg-bottom-gradient" />
 
             <div className="relative z-20 min-h-screen">
-                <div className="max-w-[1440px] mx-auto px-10">
+                <div className="max-w-[1440px] mx-auto px-5 md:px-10">
                     <WorkCycle/>
                 </div>
 
-                <div className="max-w-[1440px] mx-auto px-20">
+                <div className="max-w-[1440px] mx-auto px-5 md:px-20">
                     <TariffsSection/>
                     <InfrastructureAdvantages/>
                     <UsefulResources/>

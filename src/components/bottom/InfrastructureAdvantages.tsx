@@ -32,27 +32,27 @@ const advantages = [
 const InfrastructureAdvantages = () => {
     return (
         <div className="text-white">
-            <div className="text-5xl mb-12">Преимущества собственной инфраструктуры</div>
-            <div className="grid grid-cols-2 grid-rows-[auto_auto_auto_1fr] gap-10">
+            <div className="text-4xl md:text-5xl text-center md:text-left mb-12">Преимущества собственной инфраструктуры</div>
+            <div className="grid md:grid-cols-2 grid-rows-[auto_auto_auto_1fr] gap-10">
                 {advantages.map((item) => (
-                    <div key={item.title} className="grid grid-rows-subgrid row-span-4 gap-7">
+                    <div key={item.title} className="grid grid-rows-subgrid row-span-4 gap-10 md:gap-7">
                         <Image src={item.icon} alt={'icon'} width={74} height={74}/>
-                        <div className="text-4xl">
+                        <div className="text-3xl md:text-4xl">
                             {item.title}
                         </div>
-                        <div className="text-xl text-white max-w-xl">
+                        <div className="text-base md:text-xl text-white max-w-xl">
                             {item.description}
                         </div>
                         <div className="flex flex-col gap-5">
                             {item.list.map(adv =>
-                                <div key={adv} className="flex gap-10 items-center">
+                                <div key={adv} className="flex gap-3 md:gap-10 items-center">
                                     <Image
                                         src={'/plus.svg'}
                                         alt={'plus'}
                                         width={31}
                                         height={31}
                                     />
-                                    <div className="text-xl">{adv}</div>
+                                    <div className="text-base md:text-xl">{adv}</div>
                                 </div>
                             )}
                         </div>

@@ -29,16 +29,16 @@ const resouces = [
 
 const UsefulResources = () => {
     return (
-        <div className="text-white my-20">
-            <div className="text-5xl mb-7">Полезные ресурсы</div>
-            <div className="text-xl w-1/3 mb-10">
+        <div className="hidden md:block text-white my-20">
+            <div className="text-4xl md:text-5xl text-center md:text-left mb-7">Полезные ресурсы</div>
+            <div className="text-base md:text-xl text-center md:text-left md:w-1/3 mb-10">
                 Узнайте больше о GNK.CLUB и децентрализованных вычислениях
             </div>
-            <div className="grid grid-cols-6 gap-5">
+            <div className="grid md:grid-cols-6 gap-5">
                 {resouces.map(item =>
                     <div key={item.title} className="rounded-3xl border border-white py-7 px-5 flex flex-col">
                         <div className="flex-grow">
-                            <div className="text-2xl min-h-12">{item.title}</div>
+                            <div className="text-xl md:text-2xl min-h-12">{item.title}</div>
                             <div className="text-sm">{item.description}</div>
                         </div>
 

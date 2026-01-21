@@ -28,24 +28,24 @@ const steps = [
 
 const WorkCycle = () => {
     return (
-        <div className="bg-white rounded-3xl px-15 py-20 box-border">
-            <div className="text-5xl text-[#344499] mb-10">Полный цикл работ</div>
+        <div className="bg-white rounded-3xl px-5 md:px-15 pt-5 pb-10 md:py-20 box-border">
+            <div className="text-4xl md:text-5xl text-center md:text-left text-[#344499] mb-10">Полный цикл работ</div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
                 {steps.map(step => (
                     <div
                         key={step.id}
-                        className="rounded-3xl border border-[#0A3F71] p-7 flex flex-col gap-10"
+                        className="rounded-3xl border border-[#0A3F71] py-6 px-4 md:p-7 flex flex-col gap-5 md:gap-10"
                     >
-                        <div className="text-4xl text-[#0A3F71]">
+                        <div className="text-3xl md:text-4xl text-[#0A3F71]">
                             {step.id}
                         </div>
 
-                        <div className="flex flex-col gap-5">
+                        <div className="flex flex-col gap-4 md:gap-5">
                             <div className="text-xl">
                                 <b>{step.title}</b>
                             </div>
 
-                            <div className="text-xl">
+                            <div className="text-base md:text-xl">
                                 {step.text}
                             </div>
                         </div>
