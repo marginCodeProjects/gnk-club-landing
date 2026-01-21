@@ -8,7 +8,7 @@ import LaunchPrice from "@/components/bottom/LaunchPrice";
 export function BottomSection() {
     return (
         <div className="relative min-h-screen overflow-hidden">
-            <div className="absolute inset-0 bg-bottom-gradient" />
+            <div className="absolute inset-0 bg-bottom-gradient-mobile md:bg-bottom-gradient" />
 
             <div className="relative z-20 min-h-screen">
                 <div className="max-w-[1440px] mx-auto px-5 md:px-10">
