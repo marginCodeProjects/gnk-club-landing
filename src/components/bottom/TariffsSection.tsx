@@ -2,8 +2,11 @@
 
 import React from 'react';
 import Button from '@/components/ui/Button';
+import {useModal} from "@/providers/ModalProvider";
 
 const TariffsSection = () => {
+    const {openStart} = useModal();
+
     return (
         <div className="rounded-3xl bg-transparent">
             <div className="mx-аuto py-16 md:py-24 text-white">
@@ -12,7 +15,11 @@ const TariffsSection = () => {
                 </h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-8">
-                    <div className="rounded-3xl border border-white/70 p-5 pb-10 md:p-10 flex flex-col gap-7">
+                    <div className="
+                        rounded-3xl border border-white/70
+                        p-5 pb-10 md:p-10 flex
+                        flex-col gap-7 justify-between"
+                    >
                         <div>
                             <div className="text-3xl mb-1">
                                 <b><i>Настройка без покупки сервера</i></b>
@@ -48,14 +55,17 @@ const TariffsSection = () => {
 
                             <Button
                                 text="Оставить заявку"
-                                onClick={() => {
-                                }}
+                                onClick={openStart}
                                 type="white"
                             />
                         </div>
                     </div>
 
-                    <div className="relative rounded-3xl p-5 pb-10 md:p-10 flex flex-col gap-7 bg-light-green-gradient text-[#083F3C]">
+                    <div className="
+                        relative rounded-3xl p-5 pb-10
+                        md:p-10 flex flex-col gap-7 justify-between
+                        bg-light-green-gradient text-[#083F3C]"
+                    >
                         <div className="absolute top-0 -translate-y-1/2 right-4 md:right-8 bg-white rounded-3xl px-6 py-3 text-[#087672] text-base md:text-xl">
                             <i>Популярно</i>
                         </div>
@@ -94,8 +104,7 @@ const TariffsSection = () => {
 
                             <Button
                                 text="Оставить заявку"
-                                onClick={() => {
-                                }}
+                                onClick={openStart}
                                 type="custom"
                                 className='bg-[#087672] text-white'
                             />

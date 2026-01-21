@@ -2,8 +2,11 @@
 
 import Image from 'next/image';
 import Button from '@/components/ui/Button';
+import {useModal} from "@/providers/ModalProvider";
 
 export default function Header() {
+    const {openStart} = useModal();
+
     return (
         <header className="relative top-0 left-0 w-full z-50 bg-transparent">
             <div className="mx-auto pt-3 md:pt-6 pb-6 flex flex-col gap-6">
@@ -20,7 +23,7 @@ export default function Header() {
 
                     <Button
                         text="Оставить заявку"
-                        onClick={() => {}}
+                        onClick={openStart}
                         type="white"
                     />
                 </div>

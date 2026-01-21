@@ -2,8 +2,11 @@
 
 import React from 'react';
 import Button from "@/components/ui/Button";
+import {useModal} from "@/providers/ModalProvider";
 
 const GnkInfrastructure = () => {
+    const { openCalculator } = useModal()
+
     return (
         <div>
             <div className="rounded-3xl py-10 bg-main-gradient flex flex-col gap-7 items-center text-white">
@@ -28,7 +31,7 @@ const GnkInfrastructure = () => {
                 </div>
             </div>
             <div className="my-10 md:mx-auto w-full md:w-fit">
-                <Button text={'Рассчитать конфигурацию'} onClick={() => {}} className="w-full md:w-auto"></Button>
+                <Button text={'Рассчитать конфигурацию'} onClick={openCalculator} className="w-full md:w-auto"></Button>
             </div>
         </div>
     );

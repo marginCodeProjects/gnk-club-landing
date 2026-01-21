@@ -3,8 +3,11 @@
 import React from 'react';
 import Button from "@/components/ui/Button";
 import Image from "next/image";
+import {useModal} from "@/providers/ModalProvider";
 
 const MoneyRisks = () => {
+    const {openCalculator} = useModal();
+
     return (
         <div className="
             my-20 rounded-3xl overflow-hidden
@@ -22,7 +25,7 @@ const MoneyRisks = () => {
                     </b>
                 </div>
                 <div className="w-full md:w-fit">
-                    <Button text={'Рассчитать конфигурацию'} onClick={() => {}} type='transparent' className="w-full md:w-auto"/>
+                    <Button text={'Рассчитать конфигурацию'} onClick={openCalculator} type='transparent' className="w-full md:w-auto"/>
                 </div>
             </div>
             <div className="relative w-full min-h-[320px] md:min-h-full">

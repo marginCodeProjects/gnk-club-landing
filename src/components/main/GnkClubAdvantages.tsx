@@ -3,6 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Button from "@/components/ui/Button";
+import {useModal} from "@/providers/ModalProvider";
 
 const disadvantages = [
     {
@@ -57,6 +58,8 @@ const GNK_CLUB_PRICE = [
 ];
 
 const GnkClubAdvantages = () => {
+    const {openCalculator} = useModal();
+
     return (
         <div>
             <div className="grid md:grid-cols-2 gap-7 my-20">
@@ -166,7 +169,7 @@ const GnkClubAdvantages = () => {
                 </div>
             </div>
             <div className="mt-10 mb-30 md:mx-auto w-full md:w-fit">
-                <Button text={'Рассчитать конфигурацию'} onClick={() => {}} className="w-full md:w-auto"></Button>
+                <Button text={'Рассчитать конфигурацию'} onClick={openCalculator} className="w-full md:w-auto"></Button>
             </div>
         </div>
     );

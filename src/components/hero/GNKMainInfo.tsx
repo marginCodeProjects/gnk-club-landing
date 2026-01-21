@@ -2,8 +2,11 @@
 
 import React from 'react';
 import Button from "@/components/ui/Button";
+import {useModal} from "@/providers/ModalProvider";
 
 const GnkMainInfo = () => {
+    const {openCalculator} = useModal();
+
     return (
         <div className="text-white bg-transparent">
             <div
@@ -93,7 +96,7 @@ const GnkMainInfo = () => {
 
                     <Button
                         text="Рассчитать конфигурацию"
-                        onClick={() => {}}
+                        onClick={openCalculator}
                         type="transparent"
                         className="w-full lg:w-auto"
                     />

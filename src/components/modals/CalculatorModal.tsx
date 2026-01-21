@@ -1,0 +1,91 @@
+import ModalBase from './ModalBase'
+import Button from '@/components/ui/Button'
+import React from "react";
+import Select from "@/components/ui/Select";
+import Image from "next/image";
+
+interface CalculatorModalProps {
+    onNext: () => void;
+    onClose: () => void;
+}
+
+const options = [
+    { value: '1', label: '1 мес' },
+    { value: '2', label: '2 мес' },
+    { value: '3', label: '3 мес' },
+];
+
+const configuration = [
+    '8x NVIDIA H100 GPU',
+    'Фиксированная цена: $1.8/час за 1 GPU',
+    'Запуск от 1 дня',
+    'Техническая поддержка включена',
+];
+
+const CalculatorModal: React.FC<CalculatorModalProps> = ({ onNext, onClose }) => {
+    return (
+        <ModalBase onClose={onClose}>
+            <div className="text-4xl text-[#087672]">Калькулятор</div>
+            <div className="text-4xl text-[#087672]"><i>конфигурации</i></div>
+
+            <div className="flex gap-3 mt-10 mb-5">
+                {[8,16,24,32].map(v => (
+                    <button
+                        key={v}
+                        className="w-24 h-24 rounded-full border-2 border-[#BEDBDA] cursor-pointer"
+                    >
+                        <b><i>{v}</i></b>
+                    </button>
+                ))}
+            </div>
+
+            <div>
+                <div className="text-base mb-5">Выберите срок аренды видеокарт</div>
+                <Select
+                    placeholder="Выберите категорию..."
+                    options={options}
+                    onChange={(val) => console.log(val)}
+                />
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-3 mb-6">
+                <div className="border border-[#BEDBDA] rounded-3xl p-5 text-center">
+                    <div className="text-lg text-[#087672]">В час</div>
+                    <b className="text-3xl"><i>14,4 $</i></b>
+                </div>
+                <div className="border border-[#BEDBDA] rounded-3xl p-5 text-center">
+                    <div className="text-lg text-[#087672]">В день</div>
+                    <b className="text-3xl"><i>346 $</i></b>
+                </div>
+                <div className="border border-[#BEDBDA] rounded-3xl p-5 text-center">
+                    <div className="text-lg text-[#087672]">В месяц</div>
+                    <b className="text-3xl"><i>10368 $</i></b>
+                </div>
+            </div>
+
+            <div className="flex flex-col gap-5 mb-5">
+                <div className="text-base">Ваша конфигурация</div>
+                {configuration.map(adv =>
+                    <div key={adv} className="flex gap-3 md:gap-5 items-center">
+                        <Image
+                            src={'/plus-green.svg'}
+                            alt={'plus'}
+                            width={31}
+                            height={31}
+                        />
+                        <div className="text-base md:text-xl">{adv}</div>
+                    </div>
+                )}
+            </div>
+
+            <Button
+                text="Оставить заявку"
+                onClick={onNext}
+                className="w-full bg-[#087672] text-white"
+                type='custom'
+            />
+        </ModalBase>
+    )
+}
+
+export default CalculatorModal
