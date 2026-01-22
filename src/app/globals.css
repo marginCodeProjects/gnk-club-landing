@@ -1,0 +1,209 @@
+@import "tailwindcss";
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+    --hero-dark: #01040B;
+    --hero-blue: #0A3F71;
+    --hero-green: #087672;
+    --hero-white: #ffffff;
+
+    --diag-dark-start: 0%;
+    --diag-dark-end: 2%;
+    --diag-blue: 18%;
+    --diag-green: 55%;
+
+    --fog-white-weak: 0.3;
+    --fog-white-medium: 0.6;
+    --fog-green-strong: 0.35;
+    --fog-green-weak: 0.15;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+    --font-sans: var(--font-lt-superior), ui-sans-serif, system-ui;
+    --font-accent: var(--font-ag-palatial);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+    background: var(--background);
+    font-family: var(--font-lt-superior);
+}
+
+.font-accent {
+    font-family: var(--font-ag-palatial) !important;
+}
+
+em, i {
+    font-family: var(--font-ag-palatial);
+    font-style: italic;
+}
+
+.bg-hero-gradient {
+    background:
+            linear-gradient(
+                    to bottom,
+                    transparent 50%,
+                    rgba(255, 255, 255, var(--fog-white-weak)) 62%,
+                    rgba(255, 255, 255, var(--fog-white-medium)) 78%,
+                    var(--hero-white) 90%
+            ),
+
+            linear-gradient(
+                    to bottom,
+                    transparent 45%,
+                    rgba(8, 118, 114, var(--fog-green-strong)) 60%,
+                    rgba(8, 118, 114, var(--fog-green-weak)) 72%,
+                    transparent 85%
+            ),
+
+            linear-gradient(
+                    to bottom left,
+                    var(--hero-dark) var(--diag-dark-start),
+                    var(--hero-dark) var(--diag-dark-end),
+                    var(--hero-blue) var(--diag-blue),
+                    var(--hero-green) var(--diag-green),
+                    var(--hero-white) 100%
+            );
+}
+
+.bg-main-gradient {
+    background:
+            linear-gradient(
+                    to bottom left,
+                    var(--hero-dark) 0%,
+                    var(--hero-dark) 5%,
+                    var(--hero-blue) 40%,
+                    var(--hero-green) 100%
+            );
+}
+
+.bg-transparent-gradient {
+    background:
+            linear-gradient(
+                    to bottom left,
+                    rgba(1, 4, 11, 0.12) 0%,
+                    rgba(1, 4, 11, 0.12) 5%,
+                    rgba(10, 63, 113, 0.14) 40%,
+                    rgba(8, 118, 114, 0.18) 100%
+            );
+}
+
+.bg-blue-gradient {
+    background:
+            linear-gradient(
+                    to left,
+                    var(--hero-dark),
+                    var(--hero-blue)
+            );
+}
+
+.bg-light-green-gradient {
+    background:
+            linear-gradient(
+                    to bottom left,
+                    #88C8C6 65%,
+                    #ffffff 100%
+            );
+}
+
+.bg-bottom-gradient {
+    background:
+        /* белый туман вверх */
+            linear-gradient(
+                    to top,
+                    transparent 50%,
+                    rgba(255, 255, 255, var(--fog-white-weak)) 62%,
+                    rgba(255, 255, 255, var(--fog-white-medium)) 78%,
+                    var(--hero-white) 90%
+            ),
+
+                /* зелёный туман вверх */
+            linear-gradient(
+                    to top,
+                    transparent 45%,
+                    rgba(8, 118, 114, var(--fog-green-strong)) 60%,
+                    rgba(8, 118, 114, var(--fog-green-weak)) 72%,
+                    transparent 85%
+            ),
+
+                /* диагональная база */
+            linear-gradient(
+                    to top right,
+                    var(--hero-dark) var(--diag-dark-start),
+                    var(--hero-dark) var(--diag-dark-end),
+                    var(--hero-blue) var(--diag-blue),
+                    var(--hero-green) var(--diag-green),
+                    var(--hero-white) 100%
+            );
+}
+
+.bg-hero-gradient-mobile {
+    background:
+            linear-gradient(
+                    to bottom,
+                    transparent 50%,
+                    rgba(255, 255, 255, var(--fog-white-weak)) 62%,
+                    rgba(255, 255, 255, var(--fog-white-medium)) 78%,
+                    var(--hero-white) 90%
+            ),
+
+            linear-gradient(
+                    to bottom,
+                    transparent 45%,
+                    rgba(8, 118, 114, var(--fog-green-strong)) 60%,
+                    rgba(8, 118, 114, var(--fog-green-weak)) 72%,
+                    transparent 85%
+            ),
+
+            linear-gradient(
+                    to bottom left,
+                    var(--hero-blue) var(--diag-blue),
+                    var(--hero-green) var(--diag-green),
+                    var(--hero-white) 100%
+            );
+}
+
+.bg-bottom-gradient-mobile {
+    background:
+        /* белый туман вверх */
+            linear-gradient(
+                    to top,
+                    transparent 50%,
+                    rgba(255, 255, 255, var(--fog-white-weak)) 62%,
+                    rgba(255, 255, 255, var(--fog-white-medium)) 78%,
+                    var(--hero-white) 90%
+            ),
+
+                /* зелёный туман вверх */
+            linear-gradient(
+                    to top,
+                    transparent 45%,
+                    rgba(8, 118, 114, var(--fog-green-strong)) 60%,
+                    rgba(8, 118, 114, var(--fog-green-weak)) 72%,
+                    transparent 85%
+            ),
+
+                /* диагональная база */
+            linear-gradient(
+                    to top right,
+                    var(--hero-blue) var(--diag-blue),
+                    var(--hero-green) var(--diag-green),
+                    var(--hero-white) 100%
+            );
+}
