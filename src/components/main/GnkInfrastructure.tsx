@@ -15,7 +15,7 @@ const GnkInfrastructure = () => {
                     AI ежедневно. Токен GNK торгуется на нескольких криптобиржах, предоставляя ликвидность участникам
                     экосистемы.
                 </div>
-                <div className="w-full mt-5 grid md:grid-cols-3 gap-15 md:gap-20 text-center">
+                <div className="w-full mt-5 grid md:grid-cols-3 gap-15 md:gap-10 lg:gap-20 text-center">
                     <div>
                         <div className="text-6xl md:text-7xl">50м <i className="text-6xl md:text-5xl">$</i></div>
                         <div className='mt-2 text-base md:text-xl'>инвестиции от Bitfury</div>

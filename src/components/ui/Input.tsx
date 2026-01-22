@@ -16,7 +16,7 @@ const Input: React.FC<InputProps> = ({placeholder}) => {
                 p-3
                 mb-5
                 placeholder:text-[#BEDBDA]
-                placeholder:italic
+                placeholder-accent
             "
             placeholder={placeholder}
         />

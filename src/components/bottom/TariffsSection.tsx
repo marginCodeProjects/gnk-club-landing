@@ -106,7 +106,7 @@ const TariffsSection = () => {
                                 text="Оставить заявку"
                                 onClick={openStart}
                                 type="custom"
-                                className='bg-[#087672] text-white'
+                                className='bg-[#087672] text-white hover:bg-[#087672]/75'
                             />
                         </div>
                     </div>

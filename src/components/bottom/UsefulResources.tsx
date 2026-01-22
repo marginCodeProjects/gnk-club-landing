@@ -42,7 +42,7 @@ const UsefulResources = () => {
                             <div className="text-sm">{item.description}</div>
                         </div>
 
-                        <div className="text-lg flex justify-between items-center">
+                        <div className="text-lg flex justify-between items-center cursor-pointer">
                             <i>Перейти</i>
                             <Image
                                 src={'/arrow-up.svg'}

@@ -49,6 +49,7 @@ const GnkMainInfo = () => {
                     <div
                         className="
                             mt-12 flex flex-row gap-3 text-center
+                            md:gap-10
                             lg:mt-20 lg:gap-20 lg:text-left
                         "
                     >

@@ -1,6 +1,6 @@
 import ModalBase from './ModalBase'
 import Button from '@/components/ui/Button'
-import React from "react";
+import React, {useState} from "react";
 import Select from "@/components/ui/Select";
 import Image from "next/image";
 
@@ -22,19 +22,28 @@ const configuration = [
     'Техническая поддержка включена',
 ];
 
+const amount = [8, 16, 24, 32];
+
 const CalculatorModal: React.FC<CalculatorModalProps> = ({ onNext, onClose }) => {
+    const [selected, setSelected] = useState(amount[0]);
+
     return (
         <ModalBase onClose={onClose}>
             <div className="text-4xl text-[#087672]">Калькулятор</div>
             <div className="text-4xl text-[#087672]"><i>конфигурации</i></div>
-
+            <div className="text-base my-5">Рассчитайте стоимость мощности для вашей конфигурации</div>
             <div className="flex gap-3 mt-10 mb-5">
-                {[8,16,24,32].map(v => (
+                {amount.map(v => (
                     <button
                         key={v}
-                        className="w-24 h-24 rounded-full border-2 border-[#BEDBDA] cursor-pointer"
+                        className={
+                            `w-24 h-24 rounded-full
+                             border-2 border-[#BEDBDA] hover:bg-[#BEDBDA2B]
+                             cursor-pointer ${v === selected && 'bg-[#BEDBDA2B]'}`
+                        }
+                        onClick={() => setSelected(v)}
                     >
-                        <b><i>{v}</i></b>
+                        <b className="text-lg md:text-xl"><i>{v}</i></b>
                     </button>
                 ))}
             </div>

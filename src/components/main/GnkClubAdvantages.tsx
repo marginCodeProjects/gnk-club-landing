@@ -67,7 +67,7 @@ const GnkClubAdvantages = () => {
                 <div className="text-base md:text-xl text-center md:text-left text-[#01040B]">
                     Самостоятельная аренда GPU начинается от $2.2/час,
                     но реальная себестоимость значительно выше из-за простоев,
-                    ошибок настройки и времени на переговоры.
+                    ошибок настройки и времени на переговоры.&nbsp;
                     <b>
                         С GNK.CLUB вы получаете профессиональное решение под ключ за $1.8/час
                         за GPU и старт за 1 день.
@@ -75,8 +75,8 @@ const GnkClubAdvantages = () => {
                 </div>
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-7 text-base md:text-xl">
-                <div className="border-gray-300 border-2 px-4 md:px-10 pt-7 pb-5 rounded-3xl">
-                    <div className="flex gap-4 items-center mb-5 md:mb-10">
+                <div className="border-gray-300 border-2 px-4 md:px-10 pt-7 pb-5 rounded-3xl flex flex-col justify-between">
+                    <div className="flex gap-4 items-center md:mb-10">
                         <Image
                             src={'/book.svg'}
                             alt='book'
@@ -121,7 +121,7 @@ const GnkClubAdvantages = () => {
                         )}
                     </div>
                 </div>
-                <div className="bg-main-gradient text-white px-4 md:px-10 rounded-3xl pt-7 pb-5">
+                <div className="bg-main-gradient text-white px-4 md:px-10 rounded-3xl pt-7 pb-5 flex flex-col justify-between">
                     <div className="flex gap-4 items-center mb-5 md:mb-10">
                         <Image
                             src={'/flash.svg'}

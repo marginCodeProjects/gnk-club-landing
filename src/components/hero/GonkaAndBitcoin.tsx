@@ -15,24 +15,24 @@ const GonkaAndBitcoin = () => {
             <div className={styles.section}>
                 <div className={styles.wrapper}>
                     <div className={styles.circle}>
-                        <div className="text-center md:text-left text-xl md:text-2xl"><b><i>10,000+ NVIDIA H100 в сети</i></b></div>
-                        <div className="text-center md:text-left text-base md:text-xl">
+                        <div className="text-center xl:text-left text-xl xl:text-2xl"><b><i>10,000+ NVIDIA H100 в сети</i></b></div>
+                        <div className="text-center xl:text-left text-base xl:text-xl">
                             Единый распределённый пул GPU для реальных AI-нагрузок
                             с автоматическим масштабированием.
                         </div>
                     </div>
 
                     <div className={styles.circle}>
-                        <div className="text-center md:text-left text-xl md:text-2xl"><b><i>AWS/Azure — альтернатива монополии</i></b></div>
-                        <div className="text-center md:text-left text-base md:text-xl">
+                        <div className="text-center xl:text-left text-xl xl:text-2xl"><b><i>AWS/Azure — альтернатива монополии</i></b></div>
+                        <div className="text-center xl:text-left text-base xl:text-xl">
                             Прямой доступ к вычислениям без вендор-локина,
                             закрытых тарифов и централизованного контроля.
                         </div>
                     </div>
 
                     <div className={`${styles.circle} ${styles.active}`}>
-                        <div className="text-center md:text-left text-xl md:text-2xl"><b><i>Bitcoin — философия децентрализации</i></b></div>
-                        <div className="text-center md:text-left text-base md:text-xl">
+                        <div className="text-center xl:text-left text-xl xl:text-2xl"><b><i>Bitcoin — философия децентрализации</i></b></div>
+                        <div className="text-center xl:text-left text-base xl:text-xl">
                             Распределённая модель с независимыми участниками
                             и прозрачными экономическими стимулами.
                         </div>

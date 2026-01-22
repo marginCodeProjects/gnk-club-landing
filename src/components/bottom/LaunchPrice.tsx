@@ -20,7 +20,7 @@ const LaunchPrice = () => {
                         text={'Получить расчет'}
                         onClick={openStart}
                         type='custom'
-                        className="bg-[#BEDBDA47]/28 border border-[#034744] w-full md:w-auto"
+                        className="bg-[#BEDBDA47]/28 border border-[#034744] w-full md:w-auto hover:bg-[#BEDBDA47]"
                     />
                 </div>
             </div>
