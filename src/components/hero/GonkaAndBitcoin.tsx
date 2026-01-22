@@ -38,9 +38,9 @@ const GonkaAndBitcoin = () => {
             </div>
             <div className="mt-10 grid md:grid-cols-2 text-base md:text-xl gap-10">
                 <div>
-                    <b><i className="text-center md:text-left text-xl md:text-2xl">Миссия:</i></b>
+                    <b><i className="text-center md:text-left text-xl md:text-2xl">Миссия: </i></b>
                     Не допустить монополизации AI-инфраструктуры несколькими крупными корпорациями,
-                    как это произошло с классическими облачными вычислениями .
+                    как это произошло с классическими облачными вычислениями.
                 </div>
                 <div>
                     <b><i className="text-center md:text-left text-xl md:text-2xl">Bitcoin показал, что спрос майнеров может увеличить </i></b>
