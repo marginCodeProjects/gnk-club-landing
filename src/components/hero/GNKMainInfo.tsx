@@ -41,9 +41,9 @@ const GnkMainInfo = () => {
                             lg:text-xl
                         "
                     >
-                        Фиксированная цена $1.8 в час за 1 H100.
+                        Фиксированная цена от $1,62 в час за 1 H100.
                         <br />
-                        Надежный сервис для майнинга в сети GNK
+                        Надежный сервис для майнинга монеты GNK
                     </div>
 
                     <div
@@ -56,11 +56,11 @@ const GnkMainInfo = () => {
                         <div>
                             <div className="text-5xl lg:text-6xl">
                                 <i className="text-3xl lg:text-5xl">от</i>
-                                1,8
+                                1,62
                                 <i className="text-3xl lg:text-5xl">$</i>
                             </div>
                             <div className="mt-2 text-sm lg:text-xl">
-                                цена майнинга <br /> в час за одну H100
+                                цена майнинга <br /> в час на одной h100 <br />
                             </div>
                         </div>
 
@@ -75,10 +75,10 @@ const GnkMainInfo = () => {
 
                         <div>
                             <div className="text-5xl lg:text-6xl">
-                                10k<i className="text-3xl lg:text-5xl">$</i>
+                                9,3K<i className="text-3xl lg:text-5xl">$</i>
                             </div>
                             <div className="mt-2 text-sm lg:text-xl">
-                                готовая Barebone-<br />система на 8 GPU
+                                полностью готовый к<br /> майнингу Baremetal сервер
                             </div>
                         </div>
                     </div>

@@ -8,15 +8,15 @@ import {useModal} from "@/providers/ModalProvider";
 const disadvantages = [
     {
         title: 'Переговоры с провайдерами',
-        description: 'Минимум 7 дней на старт = $369 потерь',
+        description: 'Минимум 7 дней на старт',
     },
     {
         title: 'Риск ошибок при настройке',
-        description: 'Минимум сутки потерь = $53 убытка',
+        description: 'Минимум сутки потерь = $345 убытка',
     },
     {
         title: 'Простои без вознаграждения',
-        description: 'В среднем 5 дней/месяц = $264 потерь',
+        description: 'В среднем 5 дней/месяц = $1728 потерь',
     },
 ];
 
@@ -38,22 +38,22 @@ const advantages = [
 const MANUAL_PRICE = [
     {
         title: 'Первый месяц за 8 GPU:',
-        value: '$18,160',
+        value: '$12,368',
     },
     {
         title: 'Следующие месяцы:',
-        value: '$14,784/мес',
+        value: '$10,368/мес',
     },
 ];
 
 const GNK_CLUB_PRICE = [
     {
         title: 'Любой месяц:',
-        value: '$10,368/мес',
+        value: '$9,300/мес',
     },
     {
         title: 'Экономия 1-го месяца:',
-        value: '$7,792',
+        value: '$3,068',
     },
 ];
 
@@ -69,8 +69,7 @@ const GnkClubAdvantages = () => {
                     но реальная себестоимость значительно выше из-за простоев,
                     ошибок настройки и времени на переговоры.&nbsp;
                     <b>
-                        С GNK.CLUB вы получаете профессиональное решение под ключ за $1.8/час
-                        за GPU и старт за 1 день.
+                        С GNK.CLUB вы получаете профессиональное решение под ключ от $1.62/час за GPU и старт за 1 день.
                     </b>
                 </div>
             </div>
@@ -88,7 +87,7 @@ const GnkClubAdvantages = () => {
                                 <b><i>Самостоятельная настройка</i></b>
                             </div>
                             <div className="my-2 text-gray-400">
-                                от $17.6/час за 8 GPU
+                                от $14.4/час за 8 GPU
                             </div>
                         </div>
                     </div>
@@ -134,7 +133,7 @@ const GnkClubAdvantages = () => {
                                 <b><i>GNK.CLUB под ключ</i></b>
                             </div>
                             <div className="my-2 text-gray-200">
-                                от $14.4/час за 8 GPU
+                                от $12.96/час за 8 GPU
                             </div>
                         </div>
                     </div>
