@@ -26,6 +26,8 @@ const base_sum: Record<string, number> = {
 const CalculatorModal: React.FC<CalculatorModalProps> = ({ onNext, onClose }) => {
     const [selected, setSelected] = useState(amount[0]);
     const multiplier = selected / amount[0];
+    const [months, setMonths] = useState<number>(1);
+    const totalSum = multiplier * base_sum.month * months
 
     const configurationState = React.useMemo(() => {
         return [
@@ -62,11 +64,11 @@ const CalculatorModal: React.FC<CalculatorModalProps> = ({ onNext, onClose }) =>
                 <Select
                     placeholder="Выберите категорию..."
                     options={options}
-                    onChange={(val) => console.log(val)}
+                    onChange={(val) => setMonths(Number(val))}
                 />
             </div>
 
-            <div className="grid md:grid-cols-3 gap-3 mb-6">
+            <div className="grid md:grid-cols-3 gap-3 mb-3">
                 <div className="border border-[#BEDBDA] rounded-3xl p-5 text-center">
                     <div className="text-lg text-[#087672]">В час</div>
                     <b className="text-3xl"><i>
@@ -85,6 +87,12 @@ const CalculatorModal: React.FC<CalculatorModalProps> = ({ onNext, onClose }) =>
                         {multiplier * base_sum['month']} $
                     </i></b>
                 </div>
+            </div>
+            <div className="border border-[#BEDBDA] rounded-3xl p-5 text-center mb-6">
+                <div className="text-lg text-[#087672]">Итого</div>
+                <b className="text-3xl"><i>
+                    {totalSum} $
+                </i></b>
             </div>
 
             <div className="flex flex-col gap-5 mb-5">
