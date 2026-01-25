@@ -1,6 +1,6 @@
 import ModalBase from './ModalBase'
 import Button from '@/components/ui/Button'
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import Select from "@/components/ui/Select";
 import Image from "next/image";
 
@@ -15,17 +15,26 @@ const options = [
     { value: '3', label: '3 мес' },
 ];
 
-const configuration = [
-    '8x NVIDIA H100 GPU',
-    'Фиксированная цена: $1.8/час за 1 GPU',
-    'Запуск от 1 дня',
-    'Техническая поддержка включена',
-];
-
 const amount = [8, 16, 24, 32];
+
+const base_sum: Record<string, number> = {
+    hour: 14.4,
+    day: 346,
+    month: 10368,
+}
 
 const CalculatorModal: React.FC<CalculatorModalProps> = ({ onNext, onClose }) => {
     const [selected, setSelected] = useState(amount[0]);
+    const multiplier = selected / amount[0];
+
+    const configurationState = React.useMemo(() => {
+        return [
+            `${selected}x NVIDIA H100 GPU`,
+            'Фиксированная цена: $1.8/час за 1 GPU',
+            'Запуск от 1 дня',
+            'Техническая поддержка включена',
+        ]
+    }, [selected])
 
     return (
         <ModalBase onClose={onClose}>
@@ -60,21 +69,27 @@ const CalculatorModal: React.FC<CalculatorModalProps> = ({ onNext, onClose }) =>
             <div className="grid md:grid-cols-3 gap-3 mb-6">
                 <div className="border border-[#BEDBDA] rounded-3xl p-5 text-center">
                     <div className="text-lg text-[#087672]">В час</div>
-                    <b className="text-3xl"><i>14,4 $</i></b>
+                    <b className="text-3xl"><i>
+                        {multiplier * base_sum['hour']} $
+                    </i></b>
                 </div>
                 <div className="border border-[#BEDBDA] rounded-3xl p-5 text-center">
                     <div className="text-lg text-[#087672]">В день</div>
-                    <b className="text-3xl"><i>346 $</i></b>
+                    <b className="text-3xl"><i>
+                        {multiplier * base_sum['day']} $
+                    </i></b>
                 </div>
                 <div className="border border-[#BEDBDA] rounded-3xl p-5 text-center">
                     <div className="text-lg text-[#087672]">В месяц</div>
-                    <b className="text-3xl"><i>10368 $</i></b>
+                    <b className="text-3xl"><i>
+                        {multiplier * base_sum['month']} $
+                    </i></b>
                 </div>
             </div>
 
             <div className="flex flex-col gap-5 mb-5">
                 <div className="text-base">Ваша конфигурация</div>
-                {configuration.map(adv =>
+                {configurationState.map(adv =>
                     <div key={adv} className="flex gap-3 md:gap-5 items-center">
                         <Image
                             src={'/plus-green.svg'}
