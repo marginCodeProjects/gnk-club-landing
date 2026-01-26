@@ -4,6 +4,8 @@ import React, { createContext, useContext, useState } from 'react'
 import CalculatorModal from '@/components/modals/CalculatorModal'
 import StartWorkModal from '@/components/modals/StartWorkModal'
 import SuccessModal from '@/components/modals/SuccessModal'
+import {CalculatorData, ContactData} from "@/types/application";
+import {sendApplication} from "@/actions/sendApplication";
 
 type ModalType = 'calculator' | 'start' | 'success' | null
 
@@ -17,7 +19,9 @@ type ModalContextType = {
 const ModalContext = createContext<ModalContextType | null>(null)
 
 export const ModalProvider = ({ children }: { children: React.ReactNode }) => {
-    const [modal, setModal] = useState<ModalType>(null)
+    const [modal, setModal] = useState<ModalType>(null);
+    const [calculatorData, setCalculatorData] = useState<CalculatorData | null>(null)
+    const [contactData, setContactData] = useState<ContactData | null>(null)
 
     const value = {
         openCalculator: () => setModal('calculator'),
@@ -32,20 +36,39 @@ export const ModalProvider = ({ children }: { children: React.ReactNode }) => {
 
             {modal === 'calculator' && (
                 <CalculatorModal
-                    onNext={value.openStart}
-                    onClose={value.close}
+                    onNext={(data) => {
+                        setCalculatorData(data)
+                        value.openStart()
+                    }}
+                    onClose={() => {
+                        setCalculatorData(null)
+                        value.close()
+                    }}
                 />
             )}
 
             {modal === 'start' && (
                 <StartWorkModal
-                    onNext={value.openSuccess}
+                    onNext={async (contact) => {
+                        setContactData(contact)
+
+                        await sendApplication({
+                            contact,
+                            calculator: calculatorData ?? undefined,
+                        })
+
+                        value.openSuccess()
+                    }}
                     onClose={value.close}
                 />
             )}
 
             {modal === 'success' && (
-                <SuccessModal onClose={value.close} />
+                <SuccessModal onClose={() => {
+                    value.close();
+                    setCalculatorData(null)
+                    setContactData(null)
+                }} />
             )}
         </ModalContext.Provider>
     )

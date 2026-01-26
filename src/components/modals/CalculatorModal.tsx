@@ -1,11 +1,12 @@
 import ModalBase from './ModalBase'
 import Button from '@/components/ui/Button'
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 import Select from "@/components/ui/Select";
 import Image from "next/image";
+import {CalculatorData} from "@/types/application";
 
 interface CalculatorModalProps {
-    onNext: () => void;
+    onNext: (data: CalculatorData) => void;
     onClose: () => void;
 }
 
@@ -112,7 +113,13 @@ const CalculatorModal: React.FC<CalculatorModalProps> = ({ onNext, onClose }) =>
 
             <Button
                 text="Оставить заявку"
-                onClick={onNext}
+                onClick={() =>
+                    onNext({
+                        gpuCount: selected,
+                        months,
+                        totalSum,
+                    })
+                }
                 className="w-full bg-[#087672] text-white"
                 type='custom'
             />
