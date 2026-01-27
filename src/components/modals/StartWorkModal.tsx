@@ -16,9 +16,10 @@ const StartWorkModal: React.FC<StartWorkModalProps> = ({ onNext, onClose }) => {
     const [name, setName] = useState('')
     const [phone, setPhone] = useState('')
     const [touched, setTouched] = useState(false)
+    const [agreed, setAgreed] = useState(false)
 
     const isPhoneValid = PHONE_REGEXP.test(phone)
-    const canSubmit = name.trim().length > 0 && isPhoneValid
+    const canSubmit = name.trim().length > 0 && isPhoneValid && agreed
 
     return (
         <ModalBase onClose={onClose}>
@@ -57,7 +58,17 @@ const StartWorkModal: React.FC<StartWorkModalProps> = ({ onNext, onClose }) => {
                 type="custom"
             />
 
-            <Checkbox label={'Я соглашаюсь с условиями обработки персональных данных и принимаю политику конфиденциальности.'}/>
+            {!agreed && touched && (
+                <div className="text-red-500 text-sm mt-1">
+                    Необходимо согласие на обработку данных
+                </div>
+            )}
+
+            <Checkbox
+                label={'Я соглашаюсь с условиями обработки персональных данных и принимаю политику конфиденциальности.'}
+                checked={agreed}
+                onChange={e => setAgreed(e.target.checked)}
+            />
         </ModalBase>
     )
 }

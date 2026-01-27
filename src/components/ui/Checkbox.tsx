@@ -4,7 +4,7 @@ interface CheckboxProps extends React.InputHTMLAttributes<HTMLInputElement> {
     label: string;
 }
 
-const Checkbox = ({ label, className, ...props }: CheckboxProps) => {
+const Checkbox = ({ checked, onChange, label, className, ...props }: CheckboxProps) => {
     return (
         <div className="flex items-center gap-2 cursor-pointer select-none mt-5">
             <div className="relative flex items-center">
@@ -18,6 +18,8 @@ const Checkbox = ({ label, className, ...props }: CheckboxProps) => {
                         disabled:cursor-not-allowed disabled:bg-slate-100
                         ${className}
                     `}
+                    checked={checked}
+                    onChange={onChange}
                     {...props}
                 />
                 {/* Иконка галочки, которая появляется при состоянии :checked */}

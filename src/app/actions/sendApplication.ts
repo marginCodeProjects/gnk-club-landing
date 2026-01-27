@@ -16,14 +16,18 @@ export async function sendApplication(data: { contact: ContactData, calculator?:
         text += `\nℹ️ Без расчёта`
     }
 
-    console.log(text)
-    // await fetch(`https://api.telegram.org/bot${process.env.TELEGRAM_BOT_TOKEN}/sendMessage`, {
-    //     method: 'POST',
-    //     headers: { 'Content-Type': 'application/json' },
-    //     body: JSON.stringify({
-    //         chat_id: process.env.TELEGRAM_CHAT_ID,
-    //         text,
-    //         parse_mode: 'HTML',
-    //     }),
-    // })
+    const res = await fetch(`https://api.telegram.org/bot${process.env.TELEGRAM_BOT_TOKEN}/sendMessage`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            chat_id: process.env.TELEGRAM_CHAT_ID,
+            text,
+            parse_mode: 'HTML',
+        }),
+    });
+
+    if (!res.ok) {
+        const error = await res.text()
+        console.error('Telegram error:', error)
+    }
 }

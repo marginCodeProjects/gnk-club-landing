@@ -5,7 +5,7 @@ import CalculatorModal from '@/components/modals/CalculatorModal'
 import StartWorkModal from '@/components/modals/StartWorkModal'
 import SuccessModal from '@/components/modals/SuccessModal'
 import {CalculatorData, ContactData} from "@/types/application";
-import {sendApplication} from "@/actions/sendApplication";
+import {sendApplication} from "@/app/actions/sendApplication";
 
 type ModalType = 'calculator' | 'start' | 'success' | null
 
