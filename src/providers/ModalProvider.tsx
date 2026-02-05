@@ -52,7 +52,7 @@ export const ModalProvider = ({ children }: { children: React.ReactNode }) => {
                     onNext={async (contact) => {
                         setContactData(contact)
 
-                        await sendApplication({
+                        await submitApplication({
                             contact,
                             calculator: calculatorData ?? undefined,
                         })
@@ -73,6 +73,20 @@ export const ModalProvider = ({ children }: { children: React.ReactNode }) => {
         </ModalContext.Provider>
     )
 }
+
+async function submitApplication(data: { contact: ContactData; calculator?: CalculatorData }) {
+    const res = await fetch("/api/sendApplication", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+    });
+
+    const result = await res.json();
+    if (!result.ok) {
+        console.error("Ошибка отправки заявки", result.error);
+    }
+}
+
 
 export const useModal = () => {
     const context = useContext(ModalContext)
