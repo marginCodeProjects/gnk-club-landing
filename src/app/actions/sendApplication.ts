@@ -16,6 +16,9 @@ export async function sendApplication(data: { contact: ContactData, calculator?:
         text += `\nℹ️ Без расчёта`
     }
 
+    console.log(process.env.TELEGRAM_BOT_TOKEN)
+    console.log(process.env.TELEGRAM_CHAT_ID)
+
     const res = await fetch(`https://api.telegram.org/bot${process.env.TELEGRAM_BOT_TOKEN}/sendMessage`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
