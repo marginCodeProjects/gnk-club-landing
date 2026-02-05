@@ -22,6 +22,8 @@ WORKDIR /app
 ENV NODE_ENV=production
 ENV NEXT_TELEMETRY_DISABLED=1
 
+COPY config.env .env
+
 COPY --from=builder /app ./
 
 EXPOSE 3000
