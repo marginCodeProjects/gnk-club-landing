@@ -13,14 +13,14 @@ const LaunchPrice = () => {
             <div className="order-2 lg:order-1 flex flex-col gap-10 mb-10 mx-7 md:my-10 md:ml-7">
                 <div className="text-4xl text-[#034744]">Запустите GNK-инфраструктуру за 1 день</div>
                 <div className="text-xl">
-                    NVIDIA H100. от $1.8 в час за карту. Вход от $10 000.
+                    NVIDIA H100. от $1.62 в час за карту. Вход от $9 300.
                 </div>
                 <div className="w-full md:w-fit">
                     <Button
                         text={'Получить расчет'}
                         onClick={openStart}
                         type='custom'
-                        className="bg-[#BEDBDA47]/28 border border-[#034744] w-full md:w-auto"
+                        className="bg-[#BEDBDA47]/28 border border-[#034744] w-full md:w-auto hover:bg-[#BEDBDA47]"
                     />
                 </div>
             </div>

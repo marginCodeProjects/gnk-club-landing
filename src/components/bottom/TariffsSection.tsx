@@ -35,7 +35,7 @@ const TariffsSection = () => {
                                     <span className="text-6xl md:text-5xl"><i><b>350$</b></i></span>
                                     <span className="text-white/80">разово</span>
                                 </div>
-                                <span className="ml-5 mr-auto mt-auto text-white"><b>Настройка</b></span>
+                                <span className="ml-10 sm:ml-5 mr-auto mt-auto text-white"><b>Настройка</b></span>
                             </div>
 
                             <div className="grid grid-cols-2">
@@ -43,7 +43,7 @@ const TariffsSection = () => {
                                     <span className="text-6xl md:text-5xl "><i><b>250$</b></i></span>
                                     <span className="text-white/80">/мес</span>
                                 </div>
-                                <span className="ml-5 mr-auto mt-auto text-white"><b>Поддержка</b></span>
+                                <span className="ml-10 sm:ml-5 mr-auto mt-auto text-white"><b>Поддержка</b></span>
                             </div>
 
                             <Button
@@ -84,7 +84,7 @@ const TariffsSection = () => {
                                     <span className="text-6xl md:text-5xl "><i><b>250$</b></i></span>
                                     <span className="">разово</span>
                                 </div>
-                                <span className="ml-5 mr-auto mt-auto"><b>Настройка</b></span>
+                                <span className="ml-10 sm:ml-5 mr-auto mt-auto"><b>Настройка</b></span>
                             </div>
 
                             <div className="grid grid-cols-2">
@@ -92,7 +92,7 @@ const TariffsSection = () => {
                                     <span className="text-6xl md:text-5xl "><i><b>200$</b></i></span>
                                     <span className="">/мес</span>
                                 </div>
-                                <span className="ml-5 mr-auto mt-auto"><b>Поддержка</b></span>
+                                <span className="ml-10 sm:ml-5 mr-auto mt-auto"><b>Поддержка</b></span>
                             </div>
                             <Button
                                 text="Срок: от 1 дня"
@@ -106,7 +106,7 @@ const TariffsSection = () => {
                                 text="Оставить заявку"
                                 onClick={openStart}
                                 type="custom"
-                                className='bg-[#087672] text-white'
+                                className='bg-[#087672] text-white hover:bg-[#087672]/75'
                             />
                         </div>
                     </div>

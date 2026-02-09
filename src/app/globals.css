@@ -207,3 +207,10 @@ em, i {
                     var(--hero-white) 100%
             );
 }
+
+@layer utilities {
+    .placeholder-accent::placeholder {
+        font-family: var(--font-ag-palatial);
+        font-style: italic;
+    }
+}

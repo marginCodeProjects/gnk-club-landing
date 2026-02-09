@@ -1,10 +1,6 @@
 import React from 'react';
 
-interface InputProps {
-    placeholder: string;
-}
-
-const Input: React.FC<InputProps> = ({placeholder}) => {
+const Input: React.FC<React.InputHTMLAttributes<HTMLInputElement>> = ({placeholder, onChange, value}) => {
     return (
         <input
             className="
@@ -16,9 +12,11 @@ const Input: React.FC<InputProps> = ({placeholder}) => {
                 p-3
                 mb-5
                 placeholder:text-[#BEDBDA]
-                placeholder:italic
+                placeholder-accent
             "
             placeholder={placeholder}
+            onChange={onChange}
+            value={value}
         />
     );
 };

@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from "next/image";
 
-const resouces = [
+const resources = [
     {
         title: 'GNK.CLUB',
         description: 'Главный ресурс нашего продукта'
@@ -20,10 +20,12 @@ const resouces = [
     },
     {
         title: 'Instagram GNK.CLUB',
-        description: 'Подписывайся на нашу страницу'
+        description: 'Скоро',
+        isComingSoon: true,
     },{
         title: 'Facebook GNK.CLUB',
-        description: 'Подписывайся на нашу страницу'
+        description: 'Скоро',
+        isComingSoon: true,
     },
 ];
 
@@ -34,22 +36,34 @@ const UsefulResources = () => {
             <div className="text-base md:text-xl text-center md:text-left md:w-1/3 mb-10">
                 Узнайте больше о GNK.CLUB и децентрализованных вычислениях
             </div>
-            <div className="grid md:grid-cols-6 gap-5">
-                {resouces.map(item =>
-                    <div key={item.title} className="rounded-3xl border border-white py-7 px-5 flex flex-col">
+            <div className="grid md:grid-cols-3 xl:grid-cols-6 gap-5">
+                {resources.map(item =>
+                    <div key={item.title} className={
+                        `rounded-3xl border py-7 px-5 flex flex-col 
+                        ${item.isComingSoon ? 'border-white/50 text-white/50' : 'border-white'}`
+                    }>
                         <div className="flex-grow">
                             <div className="text-xl md:text-2xl min-h-12">{item.title}</div>
                             <div className="text-sm">{item.description}</div>
                         </div>
 
-                        <div className="text-lg flex justify-between items-center">
+                        <div className={`text-lg flex justify-between items-center ${!item.isComingSoon && 'cursor-pointer'}`}>
                             <i>Перейти</i>
-                            <Image
-                                src={'/arrow-up.svg'}
-                                alt={'link'}
-                                width={48}
-                                height={48}
-                            />
+                            {item.isComingSoon ?
+                                <Image
+                                    src={'/arrow-up-transparent.svg'}
+                                    alt={'link'}
+                                    width={48}
+                                    height={48}
+                                />
+                                :
+                                <Image
+                                    src={'/arrow-up.svg'}
+                                    alt={'link'}
+                                    width={48}
+                                    height={48}
+                                />
+                            }
                         </div>
                     </div>
                 )}

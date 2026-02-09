@@ -11,11 +11,11 @@ const GnkInfrastructure = () => {
         <div>
             <div className="rounded-3xl py-10 bg-main-gradient flex flex-col gap-7 items-center text-white">
                 <div className="text-4xl md:text-5xl text-center w-fit"> Развитая инфраструктура GNK</div>
-                <div className="px-3 md:px-20 text-base md:text-xl text-center">На платформе GONKA уже обслуживаются десятки тысяч запросов к
-                    AI ежедневно. Токен GNK торгуется на нескольких криптобиржах, предоставляя ликвидность участникам
-                    экосистемы.
+                <div className="px-3 md:px-20 text-base md:text-xl text-center">
+                    Гонка активно растёт: комьюнити создаёт майнинг‑пулы,
+                    площадки для торговли GNK и удобные API‑интерфейсы для пользователей.
                 </div>
-                <div className="w-full mt-5 grid md:grid-cols-3 gap-15 md:gap-20 text-center">
+                <div className="w-full mt-5 grid md:grid-cols-3 gap-15 md:gap-10 lg:gap-20 text-center">
                     <div>
                         <div className="text-6xl md:text-7xl">50м <i className="text-6xl md:text-5xl">$</i></div>
                         <div className='mt-2 text-base md:text-xl'>инвестиции от Bitfury</div>
@@ -25,8 +25,8 @@ const GnkInfrastructure = () => {
                         <div className='mt-2 text-base md:text-xl'>токенов в обороте</div>
                     </div>
                     <div>
-                        <div className="text-6xl md:text-7xl">30 <i className="text-6xl md:text-5xl">мин</i></div>
-                        <div className='mt-2 text-base md:text-xl'>деплой AI-приложения</div>
+                        <div className="text-6xl md:text-7xl">1,5k+</div>
+                        <div className='mt-2 text-base md:text-xl'>майнеров</div>
                     </div>
                 </div>
             </div>

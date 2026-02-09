@@ -15,6 +15,7 @@
 .circle {
     width: 29.5vw;
     height: 29.5vw;
+    aspect-ratio: 1 / 1;
 
     border-radius: 50%;
     border: 1px solid rgba(0, 0, 0, 0.08);
@@ -48,11 +49,17 @@
         max-width: 350px;
         height: auto;
         min-height: 350px;
-        padding: 20vw 8vw;
+        padding: 10vw 8vw;
     }
 
     .circle:not(:first-child) {
         margin-left: 0;
+        margin-top: -5vw;
+    }
+}
+
+@media (max-width: 700px) {
+    .circle:not(:first-child) {
         margin-top: -10vw;
     }
 }

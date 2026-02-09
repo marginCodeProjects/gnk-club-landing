@@ -40,7 +40,7 @@ const Select: React.FC<SelectProps> = ({ options, placeholder, onChange }) => {
                   w-full border border-[#BEDBDA] rounded-3xl p-3 cursor-pointer
                   font-[var(--font-ag-palatial)] flex justify-between items-center
                   transition-all duration-200
-                  ${!selectedValue ? 'text-[#BEDBDA] italic' : 'text-black'}
+                  ${!selectedValue ? 'text-[#BEDBDA] italic font-accent' : 'text-black'}
                   bg-white
                 `}
             >
